@@ -26,7 +26,7 @@ Follow these steps to build and run the Dockerized API:
 
 1. **Clone the Repository**:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/a7mdka7la/library-management-api
    cd <repository-folder>
    ```
 
