@@ -1,0 +1,100 @@
+{
+	"info": {
+	  "name": "Library Management API",
+	  "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+	  {
+		"name": "Add New Book",
+		"request": {
+		  "method": "POST",
+		  "header": [
+			{
+			  "key": "Content-Type",
+			  "value": "application/json"
+			}
+		  ],
+		  "body": {
+			"mode": "raw",
+			"raw": "{\n  \"title\": \"The Great Gatsby\",\n  \"author\": \"F. Scott Fitzgerald\",\n  \"published_year\": 1925,\n  \"isbn\": \"1234567890\",\n  \"genre\": \"Fiction\"\n}"
+		  },
+		  "url": {
+			"raw": "http://localhost:5000/books",
+			"protocol": "http",
+			"host": ["localhost"],
+			"port": "5000",
+			"path": ["books"]
+		  }
+		}
+	  },
+	  {
+		"name": "List All Books",
+		"request": {
+		  "method": "GET",
+		  "url": {
+			"raw": "http://localhost:5000/books",
+			"protocol": "http",
+			"host": ["localhost"],
+			"port": "5000",
+			"path": ["books"]
+		  }
+		}
+	  },
+	  {
+		"name": "Search Books",
+		"request": {
+		  "method": "GET",
+		  "url": {
+			"raw": "http://localhost:5000/books/search?author=F.%20Scott%20Fitzgerald",
+			"protocol": "http",
+			"host": ["localhost"],
+			"port": "5000",
+			"path": ["books", "search"],
+			"query": [
+			  {
+				"key": "author",
+				"value": "F. Scott Fitzgerald"
+			  }
+			]
+		  }
+		}
+	  },
+	  {
+		"name": "Update Book",
+		"request": {
+		  "method": "PUT",
+		  "header": [
+			{
+			  "key": "Content-Type",
+			  "value": "application/json"
+			}
+		  ],
+		  "body": {
+			"mode": "raw",
+			"raw": "{\n  \"genre\": \"Classic Fiction\"\n}"
+		  },
+		  "url": {
+			"raw": "http://localhost:5000/books/1234567890",
+			"protocol": "http",
+			"host": ["localhost"],
+			"port": "5000",
+			"path": ["books", "1234567890"]
+		  }
+		}
+	  },
+	  {
+		"name": "Delete Book",
+		"request": {
+		  "method": "DELETE",
+		  "url": {
+			"raw": "http://localhost:5000/books/1234567890",
+			"protocol": "http",
+			"host": ["localhost"],
+			"port": "5000",
+			"path": ["books", "1234567890"]
+		  }
+		}
+	  }
+	]
+  }
+  
